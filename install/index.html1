@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Prank</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 20%;
+        }
+        .terminal {
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border: 2px solid lime;
+            background-color: #000;
+        }
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terminal">
+        <h2>Accessing Byorka's Server...</h2>
+        <p>Initiating Connection...</p>
+        <p>Bypassing security protocols...</p>
+        <p>Uploading payload...</p>
+        <p><span class="blink">█</span> Loading...</p>
+    </div>
+
+    <script>
+        const messages = [
+            "Connected to Server...",
+            "Admin privileges granted...",
+            "Bypassing firewall...",
+            "Extracting sensitive data...",
+            "All systems compromised!"
+        ];
+
+        let index = 0;
+        const terminal = document.querySelector('.terminal');
+
+        function typeMessage() {
+            if (index < messages.length) {
+                const message = document.createElement('p');
+                message.textContent = messages[index];
+                terminal.appendChild(message);
+                index++;
+                setTimeout(typeMessage, 2001);
+            } else {
+                const doneMessage = document.createElement('p');
+                doneMessage.textContent = "Prank Complete! Just kidding!";
+                doneMessage.style.color = "red";
+                terminal.appendChild(doneMessage);
+            }
+        }
+
+        setTimeout(typeMessage, 2000);
+    </script>
+
+</body>
+</html>
