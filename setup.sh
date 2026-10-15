@@ -572,19 +572,6 @@ cd
 curl -sS ifconfig.me > /etc/myipvps
 curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
 curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
-# ============================================================
-# Install Bot Telegram Ripzz Store (BotVPN2) - opsional
-# Ditambahkan 2026-10-13: install via script resmi yang anti
-# tumpang tindih (1 instance via PM2). Mencegah rebutan token
-# Telegram bila bot diinstall/diinstall ulang.
-# ============================================================
-echo -e ""
-echo -e "[ ${yell}INFO${NC} ] Install Bot Telegram Ripzz Store ? (y/n)"
-read botanswer
-if [ "$botanswer" != "${botanswer#[Yy]}" ]; then
-  echo -e "[ ${yell}INFO${NC} ] Install bot (1 instance via PM2, anti-dobel)..."
-  bash <(curl -sL https://raw.githubusercontent.com/ajijainalganteng-wq/BotVPN2/main/install.sh)
-fi
 rm /root/tools.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/pointing.sh >/dev/null 2>&1
