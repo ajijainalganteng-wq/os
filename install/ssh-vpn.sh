@@ -34,9 +34,8 @@ organizationalunit=none
 commonname=none
 email=none
 
-# simple password minimal
-curl -sS ${REPO}install/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
-chmod +x /etc/pam.d/common-password
+# password policy: minimal secure (jangan overwrite PAM dari remote)
+grep -q "minlen" /etc/security/pwquality.conf 2>/dev/null || echo "minlen = 6" >> /etc/security/pwquality.conf
 
 # go to root
 cd
