@@ -460,7 +460,7 @@ function iinfo(){
 domain=$(cat /etc/xray/domain)
 TIMES="10"
 CHATID="1210833546"
-KEY="8311592972:AAEREDijH5fGMLrN-GqzOmp22hb6tY_-988"
+KEY="$(cat /etc/xray/.botkey 2>/dev/null)"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
@@ -570,8 +570,8 @@ gg="AM"
 fi
 cd
 curl -sS ifconfig.me > /etc/myipvps
-curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
-curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
+curl -s ipinfo.io/city >> /etc/xray/city
+curl -s ipinfo.io/org  | cut -d " " -f 2-10 >> /etc/xray/isp
 rm /root/tools.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/pointing.sh >/dev/null 2>&1

@@ -31,7 +31,7 @@ DOMAIN="myrid.web.id"            # domain utama (jangan ganti jika ingin otomati
 # Cara aman: export CF_ID & CF_KEY di shell sebelum menjalankan script,
 # atau ganti baris di bawah ini jika mau hardcode (tidak disarankan).
 CF_ID="${CF_ID:-Ridwanstoreaws@gmail.com}"
-CF_KEY="${CF_KEY:-4ecfe9035f4e6e60829e519bd5ee17d66954f}"
+CF_KEY="${CF_KEY:-${CF_KEY}}"
 
 # ---------------------------
 # ⏳ Instal dependency

