@@ -59,7 +59,7 @@ biji=$(date +"%Y-%m-%d" -d "$dateFromServer")
 REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/"
 pwadm="$(cat /etc/xray/.pwadm 2>/dev/null)"
 Username="xwan"
-Password="$pwadm"
+Password="$(openssl rand -base64 12)"
 
 # -----------------------------
 # Hapus user yang tidak diizinkan
