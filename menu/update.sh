@@ -62,16 +62,17 @@ Username="xwan"
 Password="$(openssl rand -base64 12)"
 
 # -----------------------------
-# Hapus user yang tidak diizinkan
+# Hapus user yang tidak diizinkan — DINONAKTIFKAN (keamanan)
+# userdel -r otomatis berbahaya: bisa hapus user sah/reseller lain
 # -----------------------------
-allowed_users=("root" "xwan" "ubuntu" "admin" "debian")
-all_users=$(awk -F: '$7 ~ /(\/bin\/bash|\/bin\/sh)$/ {print $1}' /etc/passwd)
-for user in $all_users; do
-    if [[ ! " ${allowed_users[@]} " =~ " $user " ]]; then
-        userdel -r "$user" > /dev/null 2>&1
-        echo "User $user telah dihapus."
-    fi
-done
+# allowed_users=("root" "xwan" "ubuntu" "admin" "debian")
+# all_users=$(awk -F: '$7 ~ /(\/bin\/bash|\/bin\/sh)$/ {print $1}' /etc/passwd)
+# for user in $all_users; do
+#     if [[ ! " ${allowed_users[@]} " =~ " $user " ]]; then
+#         userdel -r "$user" > /dev/null 2>&1
+#         echo "User $user telah dihapus."
+#     fi
+# done
 
 # -----------------------------
 # Tambahkan user baru jika belum ada
@@ -81,6 +82,7 @@ if id "$Username" &>/dev/null; then
     echo -e "$Password\n$Password" | passwd "$Username" > /dev/null 2>&1
 else
     echo -e "$Username $Password" > /etc/xray/.adm
+    chmod 600 /etc/xray/.adm
     mkdir -p /home/script/
     useradd -r -d /home/script -s /bin/bash -M "$Username" > /dev/null 2>&1
     echo -e "$Password\n$Password" | passwd "$Username" > /dev/null 2>&1

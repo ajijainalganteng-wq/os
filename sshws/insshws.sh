@@ -21,9 +21,9 @@ fi
 # Link Hosting Kalian
 sudo apt install python3
 
-wget -O /usr/bin/ws "http://ansendant.web.id/os/sshws/ws"
+wget -O /usr/bin/ws "https://ansendant.web.id/os/sshws/ws"
 chmod +x /usr/bin/ws
-wget -O /usr/bin/config.con "http://ansendant.web.id/os/sshws/config.conf"
+wget -O /usr/bin/config.con "https://ansendant.web.id/os/sshws/config.conf"
 chmod +x /usr/bin/config.conf
 
 # Installing Service
@@ -51,7 +51,7 @@ systemctl enable ws.service
 systemctl start ws.service
 systemctl restart ws.service
 
-wget -O /usr/local/bin/ws-ovpn "http://ansendant.web.id/os/sshws/ws"
+wget -O /usr/local/bin/ws-ovpn "https://ansendant.web.id/os/sshws/ws"
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
