@@ -220,6 +220,8 @@ apt -y install vnstat
 /etc/init.d/vnstat restart
 apt -y install libsqlite3-dev
 wget https://humdi.net/vnstat/vnstat-2.6.tar.gz
+# Verifikasi checksum (M2 fix)
+echo "89276e0a7281943edb554b874078278ad947dc312938a2451e03eb80679f7ff7  vnstat-2.6.tar.gz" | sha256sum -c - || { echo "Checksum vnstat GAGAL!"; exit 1; }
 tar zxvf vnstat-2.6.tar.gz
 cd vnstat-2.6
 ./configure --prefix=/usr --sysconfdir=/etc && make && make install
