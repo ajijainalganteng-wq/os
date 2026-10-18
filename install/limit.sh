@@ -2,10 +2,10 @@
 # ==========================================
 # Limit Service Installer - Newbie Store
 # Author: Ansendant (modified by ChatGPT)
-# Repo: http://ansendant.web.id/os/
+# Repo: https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/
 # ==========================================
 
-REPO="http://ansendant.web.id/os/"
+REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/"
 
 # ------------------------------------------
 # Prepare systemd dan direktori kerja

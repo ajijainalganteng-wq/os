@@ -24,7 +24,7 @@ error() { echo -e "${RED}[ERROR]${NC} $*"; exit 1; }
 # ──────────────────────────────
 # ⚙️  Variabel Utama
 # ──────────────────────────────
-REPO="http://ansendant.web.id/os/"
+REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/"
 RCLONE_CONF="${REPO}install/rclone.conf"
 
 # ──────────────────────────────

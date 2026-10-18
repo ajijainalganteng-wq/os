@@ -4,7 +4,7 @@ echo "✨ FILE ENC BY ANSENDANTVPN"
 # By NEWBIE VPN 
 # ==================================================
 # Link Hosting Kalian
-REPO="http://ansendant.web.id/os/"
+REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/"
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive

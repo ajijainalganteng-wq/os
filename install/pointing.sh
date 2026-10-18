@@ -26,7 +26,7 @@ err()     { echo -e "${RED}[ERROR]${NC} $*" >&2; }
 # ---------------------------
 # 🌐 Konfigurasi (edit bila perlu)
 # ---------------------------
-REPO="http://ansendant.web.id/os/"
+REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/"
 DOMAIN="myrid.web.id"            # domain utama (jangan ganti jika ingin otomatis)
 # Cara aman: export CF_ID & CF_KEY di shell sebelum menjalankan script,
 # atau ganti baris di bawah ini jika mau hardcode (tidak disarankan).

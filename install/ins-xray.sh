@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 
-REPO="http://ansendant.web.id/os/"
+REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/"
 echo -e ""
 date
 echo ""
