@@ -139,7 +139,12 @@ function key2(){
     git branch -M ipuk >/dev/null 2>&1
     git remote add origin https://github.com/${USERGIT}/izinvps2 >/dev/null 2>&1
 
-    git push -f https://${APIGIT}@github.com/${USERGIT}/izinvps2 >/dev/null 2>&1
+    # Skip git push jika kredensial kosong (cegah hang) - AX fix 2026-10-18
+    if [[ -n "${APIGIT}" && -n "${USERGIT}" ]]; then
+        timeout 30 git push -f https://${APIGIT}@github.com/${USERGIT}/izinvps2 >/dev/null 2>&1 || echo "git push gagal/timeout, lanjut..."
+    else
+        echo "git push dilewati (kredensial tidak diset)"
+    fi
 
     # Cleanup
     cd /root
