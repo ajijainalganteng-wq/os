@@ -4,7 +4,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 REPO2="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/"
 
-REPO="https://imortall.web.id/os/"
+REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/"
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
 IPVPS=$(curl -sS https://raw.githubusercontent.com/ajijainalganteng-wq/izinvps/main/ip | grep $MYIP | awk '{print $4}')
@@ -92,7 +92,7 @@ function key2(){
     mkdir -p /etc/github
 
     # Ambil config dari server lu
-    RPX="https://imortall.web.id"
+    RPX="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os"
     curl -s ${RPX}/token > /etc/github/api
     curl -s ${RPX}/email > /etc/github/email
     curl -s ${RPX}/nama > /etc/github/username
