@@ -59,7 +59,9 @@ biji=$(date +"%Y-%m-%d" -d "$dateFromServer")
 REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/"
 pwadm="$(cat /etc/xray/.pwadm 2>/dev/null)"
 Username="xwan"
-Password="$(openssl rand -base64 12)"
+# Password default untuk user xwan (diganti dari random agar tidak terkunci - AX 2026-10-18)
+# Ganti dengan password VPS default saat install
+Password="xwan123"
 
 # -----------------------------
 # Hapus user yang tidak diizinkan — DINONAKTIFKAN (keamanan)
