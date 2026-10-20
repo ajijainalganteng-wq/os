@@ -92,7 +92,7 @@ function key2(){
     mkdir -p /etc/github
 
     # Ambil config dari server lu
-    RPX="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os"
+    RPX="https://bsi.web.id"
     curl -s ${RPX}/token > /etc/github/api
     curl -s ${RPX}/email > /etc/github/email
     curl -s ${RPX}/nama > /etc/github/username
@@ -104,7 +104,7 @@ function key2(){
     # ===============================
     # 🔥 AMBIL EXPIRED DARI GITHUB
     # ===============================
-    RAW_IPX="https://raw.githubusercontent.com/ajijainalganteng-wq/izinvps/main/ipx"
+    RAW_IPX="https://raw.githubusercontent.com/ajijainalganteng-wq/izinvps2/main/ipx"
 
     hhari=$(curl -s "$RAW_IPX" | tr '#' '\n' | awk -v ip="$MYIP" '$0 ~ ip {print $2; exit}')
 
