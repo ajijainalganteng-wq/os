@@ -51,7 +51,7 @@ systemctl enable ws.service
 systemctl start ws.service
 systemctl restart ws.service
 
-wget -O /usr/local/bin/ws-ovpn "https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/sshws/ws"
+wget -O /usr/local/bin/ws-ovpn "https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/sshws/ws-ovpn"
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
