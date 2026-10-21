@@ -23,7 +23,7 @@ sudo apt install python3
 
 wget -O /usr/bin/ws "https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/sshws/ws"
 chmod +x /usr/bin/ws
-wget -O /usr/bin/config.con "https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/sshws/config.conf"
+wget -O /usr/bin/config.conf "https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/sshws/config.conf"
 chmod +x /usr/bin/config.conf
 
 # Installing Service
