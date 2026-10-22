@@ -4,7 +4,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 REPO2="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/"
 
-REPO="https://raw.githubusercontent.com/ajijainalganteng-wq/os/main/files/os/"
+REPO="https://bsi.web.id/os/"
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
 IPVPS=$(curl -sS https://raw.githubusercontent.com/ajijainalganteng-wq/izinvps/main/ip | grep $MYIP | awk '{print $4}')
@@ -330,7 +330,7 @@ fun_bar() {
 
 
 res2() {
-wget ${REPO2}install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget ${REPO}install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 } 
 
